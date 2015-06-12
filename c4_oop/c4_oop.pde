@@ -1,12 +1,22 @@
 Vehicle car;
 Vehicle taxi;
+Vehicle taxiAmerica;
+
+ArrayList<Vehicle> listOfCars = new ArrayList<Vehicle>();
 
 void setup() 
 {
   size(500, 500);
   // color, xPos, yPos, xSpeed
   car = new Vehicle(color(200,200,200), 0, 100, 1); 
-  taxi = new Vehicle(color(255,0,0), 0, 10, 2);
+  listOfCars.add(car);
+  
+  taxi = new Vehicle(color(255,0,0), 0, 200, 2);
+  listOfCars.add(taxi);
+  
+  taxiAmerica = new Vehicle(color(255,255,0), 0, 300, 1.5);
+  listOfCars.add(taxiAmerica);
+  
   
   // todo 1: add tyres to vehicle class
   // todo 2: use arraylist and for loop to create more than 1 vehicle (hint: https://processing.org/reference/ArrayList.html)
@@ -16,14 +26,23 @@ void setup()
 void draw() 
 {
   background(255);
+ 
   
-  car.drive();
-  car.display();
+  for(int i=0; i<listOfCars.size(); i++)
+  {
+    listOfCars.get(i).drive();
+    listOfCars.get(i).display();
+  }
   
-  taxi.drive();
-  taxi.display();
   
 }
 
 
+void mouseReleased() 
+{
+  listOfCars.add(new Vehicle(
+    color(random(255), random(255), random(255)),
+    mouseX, mouseY, random(5)
+   ));
+}
 
