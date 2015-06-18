@@ -12,3 +12,9 @@ Install processing 2.2.1
 HomeWork BMI:
   - refer to http://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi-m.htm
   - implement a BMI calculator using GUI in processing
+
+Install Kinect
+  - NOTE: Kinect only runs on Microsoft Windows platform!
+  - Kinect for Windows Runtime 2.0: https://www.microsoft.com/en-us/download/details.aspx?id=44559
+  - Kinect for Windows SDK v1.8: https://www.microsoft.com/en-us/download/details.aspx?id=40278
+  - simpleOpenNi library from processing
