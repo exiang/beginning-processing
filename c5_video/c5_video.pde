@@ -3,9 +3,13 @@ Movie theMov;
 boolean isPlaying;
 boolean isLooping;
 
+PShader blur;
+
 void setup() {
   size(960, 540);
   frameRate(30);
+   blur = loadShader("blur.glsl");
+   
   theMov = new Movie(this, "0293_earthonblackflair.mp4");
   theMov.loop();
   
@@ -20,6 +24,8 @@ void setup() {
 
 
 void draw() {
+  
+  filter(blur);
   background(0);
   println(theMov.time()+" vs " +theMov.duration());
   
@@ -31,7 +37,9 @@ void draw() {
     isPlaying = false;
   }
 
-  image(theMov, 0, 0);   
+  image(theMov, 0, 0);
+  //filter(GRAY);
+  //filter(INVERT);
 }
 
 void movieEvent(Movie m) { 

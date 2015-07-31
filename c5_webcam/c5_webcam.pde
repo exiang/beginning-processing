@@ -35,6 +35,9 @@ void draw()
   }
   
   // todo 1: mirror your image to fix some front web cam issue (hint: http://forum.processing.org/one/topic/mirroring-a-webcam-in-a-sketch.html)
-  image(cam, 0, 0);
+  
+  scale(-1,1); 
+  image(cam, -width, 0);
+  
 }
-
+  

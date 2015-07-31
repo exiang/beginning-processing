@@ -49,7 +49,7 @@ void setup()
   
   context.enableHand();
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
-  //context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
+//  context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_WAVE);
  
   background(200,0,0);
@@ -218,7 +218,7 @@ void drawRightPalm(int userId)
   fill(0,255,0); 
    
   // draw the circle at the position of the head with the head size scaled by the distance scalar
-  ellipse(jointPos_Proj.x,jointPos_Proj.y, distanceScalar*headsize,distanceScalar*headsize);
+  ellipse(jointPos_Proj.x,jointPos_Proj.y, headsize,headsize);
 }
 
 // -----------------------------------------------------------------

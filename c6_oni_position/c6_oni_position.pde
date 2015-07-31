@@ -24,8 +24,9 @@ void setup()
   // Enable and load recording in data folder
   //context = new SimpleOpenNI(this, "Kinect_02.oni");
   
-  context.setMirror(false);
+  context.setMirror(true);
   context.enableDepth();
+  context.enableRGB();
 
   // Enable skeleton generation for all joints
   context.enableUser();
@@ -41,7 +42,8 @@ void draw()
   context.update();
   
   // Draw depth image
-  image(context.depthImage(), 0, 0);
+  image(context.rgbImage(), 0, 0);
+  //image(context.depthImage(), 0, 0);
   
   // Get number of users in scene
   int userCount = context.getNumberOfUsers();
