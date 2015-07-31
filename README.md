@@ -19,3 +19,6 @@ Install Kinect
   - Kinect for Windows SDK v1.8: https://www.microsoft.com/en-us/download/details.aspx?id=40278
   - Kinect Toolkit: http://www.microsoft.com/en-us/download/details.aspx?id=40276
   - simpleOpenNi library from processing ~111MB
+
+LED Strip
+https://github.com/chrisallenlane/arduino-radioshack-tri-color-led-strip-2760339
