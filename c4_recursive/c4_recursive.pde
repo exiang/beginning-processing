@@ -7,7 +7,7 @@ void draw() {
   background(255);
   stroke(0);
   noFill();
-  drawCircle(width/2,height/2,300);
+  drawCircle(width/2,height/2, 300);
 }
 
 void drawCircle(float x, float y, float radius) 
@@ -17,13 +17,13 @@ void drawCircle(float x, float y, float radius)
   // todo 3: grow circles to the right only
   fill(128, 55);
   ellipse(x, y, radius, radius);
-  if(radius > 100) 
+  if(radius > 5) 
   {
     // drawCircle() calls itself twice, creating a branching effect. 
     // For every circle, a smaller circle is drawn to the left and right.
     // right
     drawCircle(x + radius/2, y, radius/2);
     // left
-    //drawCircle(x - radius/2, y, radius/2); 
+    drawCircle(x - radius/2, y, radius/2);
   }
 }
