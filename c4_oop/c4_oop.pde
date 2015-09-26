@@ -27,12 +27,8 @@ void draw()
 {
   background(255);
  
-  
-  for(int i=0; i<listOfCars.size(); i++)
-  {
-    listOfCars.get(i).drive();
-    listOfCars.get(i).display();
-  }
+  car.drive();
+  car.display();
   
   
 }
@@ -40,9 +36,6 @@ void draw()
 
 void mouseReleased() 
 {
-  listOfCars.add(new Vehicle(
-    color(random(255), random(255), random(255)),
-    mouseX, mouseY, random(5)
-   ));
+  
 }
 

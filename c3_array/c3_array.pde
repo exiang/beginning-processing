@@ -1,10 +1,22 @@
 int i;
-int x1Width = 50; int x1Color=255;
-int x2Width = 80; int x2Color=100;
+int bar1Width = 50; int bar1Color=255;
+int bar2Width = 80; int bar2Color=100;
+
+int[] barWidth = {50, 80, 60, 120, 40, 10, 200, 190};
+int[] barColor = {255, 100, 50, 0, 60, 120, 160, 200};
+
+int[][] bar = {
+  // bar 1
+  {50, 255},
+  // bar 2
+  {80, 100},
+  {60, 50},
+  {120, 0}
+}
 
 void setup() 
 {
-  size(100, 100);
+  size(600, 600);
   
   // todo 1: use array to reimplement this code, output should remain the same
   // todo 2: set different grayscale for each bar using 2D array
@@ -14,13 +26,14 @@ void setup()
 void draw()
 {
   background(255,255,0);
-  
-  i=0;
-  fill(x1Color);
-  rect(0, i*10, x1Width, 8);
-  
-  i=1;
-  fill(x2Color);
-  rect(0, i*10, x2Width, 8);
+
+  // bar 1
+  for(int i=0; i<barColor.length; i++)
+  {
+    // i=0;
+    fill(barColor[i]);
+    rect(0, i*20, barWidth[i], 20);
+  }
+    
 }
 

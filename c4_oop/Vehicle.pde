@@ -19,16 +19,7 @@ class Vehicle
     fill(c);
     rectMode(CENTER);
     rect(xPos, yPos, 20, 10);
-    
-    fill(0);
-    // back left tyre
-    rect(xPos-6, yPos-6, 4, 2);
-    // back right tyre
-    rect(xPos-6, yPos+6, 4, 2);
-    // front left tyre
-    rect(xPos+6, yPos-6, 4, 2);
-    // front right tyre
-    rect(xPos+6, yPos+6, 4, 2);
+ 
   }
 
   void drive() 
