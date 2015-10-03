@@ -16,13 +16,17 @@ void draw()
   // Move the ball according to its speed.
   x = x + xspeed;
   // todo 1: add y-axis implementation
+  y = y + yspeed;
   
   // Check for bouncing.
   if ((x > width) || (x < 0)) {
     xspeed = xspeed * -1;
   }
   // todo 1: add y-axis implementation
-  
+  if ((y >= height) || (y < 0)) {
+    yspeed = yspeed * -1;
+  }
+  println(yspeed);
 
   stroke(0);
   fill(175);
