@@ -7,7 +7,7 @@ void setup()
   background(100,100,0);
   
   // api refer to: http://openweathermap.org/current#name
-  json = loadJSONObject("http://api.openweathermap.org/data/2.5/weather?q=himalaya&units=metric");
+  json = loadJSONObject("http://api.openweathermap.org/data/2.5/weather?q=northpole&units=metric&lang=zh_cn");
 
   String city = json.getString("name");
   println(city);

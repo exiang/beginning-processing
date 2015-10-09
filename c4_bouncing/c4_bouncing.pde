@@ -1,7 +1,7 @@
 float x = 100;
 float y = 100;
 float xspeed = 2;
-float yspeed = 3.3;
+float yspeed = 5;
 
 void setup() 
 {
