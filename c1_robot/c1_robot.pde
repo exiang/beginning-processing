@@ -1,14 +1,36 @@
+int xPos;
+int speed;
+int bgColor;
 void setup() 
 {
   size(640, 480);
+  xPos = 0;
+  speed = 1;
+  bgColor = 0;
 }
 
 void draw() 
 {
-  background(255);
-  //
+  if(xPos<500)
+  {
+    xPos = xPos+speed;
+  }
+  else
+  {
+    xPos = -200;
+    speed = speed + 2;
+    bgColor = (bgColor+4)%255;
+  }
+  println(xPos);
+  
+  background(bgColor);
+  translate(xPos, 0);
+  myRobot();
+}
+
+void myRobot()
+{
   scale(0.5, 0.5);
-  translate(300, 100);
   
   // head
   fill(37, 205, 247);
@@ -28,8 +50,4 @@ void draw()
   rectMode(CORNER);
   rect(200, 475, 50, 200);
   rect(550, 475, 50, 200);
-  
-  textSize(32);
-  fill(0, 102, 153, 204);
-  text("My Evil Robot for world conquer", 12, 45); 
 }
