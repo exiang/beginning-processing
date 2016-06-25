@@ -1,3 +1,5 @@
+import java.util.Date;
+
 void setup() 
 {
   size(640, 360);
@@ -43,4 +45,14 @@ void star(float x, float y, float radius1, float radius2, int npoints)
     vertex(sx, sy);
   }
   endShape(CLOSE);
+}
+
+void keyPressed()
+{
+  if(key == ' ')
+  {
+    Date d = new Date();
+    long current = d.getTime()/1000; 
+    saveFrame("star_generate_2_"+current+".png");
+  }
 }
