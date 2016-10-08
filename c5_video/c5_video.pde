@@ -46,8 +46,18 @@ void movieEvent(Movie m) {
   m.read(); 
 } 
 
-void keyPressed() {
-    if (key == 'p') {
-     
+void keyPressed() 
+{
+    if (key == 'p') 
+    {
+      if (isPlaying) 
+      {
+        theMov.pause();
+      } 
+      else 
+      {
+        theMov.play();
+      }
+      isPlaying = !isPlaying;
     }
 }
