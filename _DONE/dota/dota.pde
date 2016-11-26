@@ -24,10 +24,15 @@ void draw()
   axe.drawMe();
   
   // sniper
-  sniper.xPos = mouseX; sniper.yPos = mouseY;
+  //sniper.xPos = mouseX; sniper.yPos = mouseY;
   sniper.drawMe();
 
-  
   // lion
   lion.drawMe();
+}
+
+void mousePressed() 
+{
+  sniper.xDest = mouseX;
+  sniper.yDest = mouseY;
 }

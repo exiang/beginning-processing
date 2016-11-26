@@ -3,6 +3,9 @@ class Hero
   String name = "";
   int xPos = 0;
   int yPos = 0;
+  int xDest = 0;
+  int yDest = 0;
+  int slope;
   float hp = 100.0;
   int w = 50;
   int h = 50;
@@ -13,8 +16,8 @@ class Hero
   Hero(String pName, int pXPos, int pYPos, int pW, int pH, int pSpeed)
   {
     name = pName;
-    xPos = pXPos;
-    yPos = pYPos;
+    xPos = xDest = pXPos;
+    yPos = yDest = pYPos;
     w = pW;
     h = pH;
     speed = pSpeed;
@@ -46,6 +49,7 @@ class Hero
     }
     
     fill(0);
+    textAlign(CENTER);
     text(name, xPos, yPos-(h/2)-20); 
   }
   
@@ -55,6 +59,16 @@ class Hero
     {
       xPos = xPos + speed;
       if(xPos > width) xPos = -100;
+    }
+    else
+    {
+       int xDistance = xDest - xPos;
+       int yDistance = yDest - yPos;
+       double distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
+       if (distance > 1) {
+           xPos += xDistance * 1.1;
+           yPos += yDistance * 1.1;
+       }
     }
   }
 }
