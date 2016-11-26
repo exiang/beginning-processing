@@ -1,17 +1,19 @@
 PImage img;
+String url;
 void setup() 
 {
   size(500, 375);
-  String url = "http://www.hetemeel.com/einsteinshow.php?text=Hello+World";
-  img = loadImage(url, "jpg");
+  
+  
 }
 
 void draw() 
 {
+  url = "http://www.hetemeel.com/einsteinshow.php?text=mouseX:+"+mouseX;
+  img = loadImage(url, "jpg");
   background(0, 0, 0);
-  //tint(0, 128, 255);
+  tint(255, 255, 1);
   image(img, 0, 0);
   
   // todo 1: change the text on the image to your own
 } 
-

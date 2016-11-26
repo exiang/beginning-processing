@@ -9,7 +9,7 @@ void setup()
   stroke(0);
   pushMatrix();
     // todo: Scale up the black square, but keep its upper left corner in the same place 
-    scale(2.0);
-    rect(20, 20, 40, 40);
+    //scale(2.0);
+    //rect(20, 20, 40, 40);
   popMatrix();
 }

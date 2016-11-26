@@ -2,20 +2,9 @@ int i;
 int bar1Width = 50; int bar1Color=255;
 int bar2Width = 80; int bar2Color=100;
 
-//int[] barWidth = {50, 80, 60, 120, 40, 10, 200, 190};
-//int[] barColor = {255, 100, 50, 0, 60, 120, 160, 200};
+int[] barWidth = {50, 80, 60, 120, 40, 10, 200, 190, 200};
+int[] barColor = {255, 100, 50, 0, 60, 120, 160, 200, 255};
 
-int[][] bar = {
-  // bar 1
-  {50, 255},
-  // bar 2
-  {80, 100},
-  {60, 50},
-  {120, 0},
-  {40, 60},
-  {10, 120},
-  {190, 200},
-};
 
 void setup() 
 {
@@ -30,12 +19,9 @@ void draw()
 {
   background(255,255,0);
 
-  // bar 1
-  for(int i=0; i<bar.length; i++)
+  for(int i=0; i<barWidth.length; i++)
   {
-    // i=0;
-    fill(bar[i][1]);
-    rect(0, i*20, bar[i][0], 20);
+    rect(0, 20*i, barWidth[i], 20);
   }
     
 }
