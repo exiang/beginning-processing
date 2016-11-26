@@ -55,7 +55,7 @@ void draw()
 
 void mouseReleased() 
 {
-  Vehicle tmpCar = new Vehicle(color(random(50,250), random(50,255), random(50,250)), mouseX, mouseY, random(6,60), iCar);
+  Vehicle tmpCar = new Vehicle(color(random(50,250), random(50,255), random(50,250)), mouseX, mouseY, random(6,20), iCar);
   listOfVehicles.add(tmpCar);
 }
 
@@ -66,4 +66,3 @@ void keyPressed()
     isPause = !isPause;
   }
 }
-

@@ -1,6 +1,7 @@
 Hero axe;
 Hero sniper;
 Hero lion;
+ArrayList<Hero> heroes;
 
 void setup()
 {
@@ -13,6 +14,17 @@ void setup()
   sniper.avatar = loadImage("hero.sniper.png");
   
   lion = new Hero("Lion", 500, 400, 50, 50, 10);
+  
+  heroes = new ArrayList<Hero>();
+  heroes.add(axe);
+  heroes.add(sniper);
+  heroes.add(lion);
+  
+  for(int i=0; i<heroes.size(); i++)
+  {
+    heroes.get(i).sayMyName();
+  }
+  
   
 }
 
