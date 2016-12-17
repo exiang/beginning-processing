@@ -1,6 +1,7 @@
 class Hero
 {
   String name = "";
+  float easing = 0.05;
   int xPos = 0;
   int yPos = 0;
   int xDest = 0;
@@ -64,11 +65,8 @@ class Hero
     {
        int xDistance = xDest - xPos;
        int yDistance = yDest - yPos;
-       double distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
-       if (distance > 1) {
-           xPos += xDistance * 1.1;
-           yPos += yDistance * 1.1;
-       }
+       xPos += xDistance * easing;
+       yPos += yDistance * easing;
     }
   }
 }
